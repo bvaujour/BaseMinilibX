@@ -31,7 +31,10 @@ $(OBJ_DIR)/%.o: %.c Makefile
 
 all: $(NAME)
 
-$(NAME) : $(OBJ)
+$(OBJ_DIR):
+	mkdir -p obj
+
+$(NAME) : $(OBJ_DIR) $(OBJ)
 	make -C $(MLX_DIR)
 	make -C $(LIBFT_DIR)
 	@$(CC) $(CFLAGS) $(OBJ) $(MATH_LINK) $(MLX_LINK) $(LIBFT_LINK) -o $(NAME)
