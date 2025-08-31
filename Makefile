@@ -1,6 +1,8 @@
-NAME = doom
+NAME = game
 
 SRC =	main.c
+
+INCLUDE = game.h
 
 OBJ_DIR = obj
 LIBFT_DIR = libs/libft
@@ -26,7 +28,7 @@ RESET = \033[0m
 
 
 
-$(OBJ_DIR)/%.o: %.c Makefile
+$(OBJ_DIR)/%.o: %.c Makefile $(INCLUDE)
 	@$(CC) $(CFLAGS) $(LIBS_INCLUDES_PATH) -c $< -o $@
 
 all: $(NAME)

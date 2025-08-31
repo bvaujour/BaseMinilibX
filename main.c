@@ -3,34 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bvaujour <bvaujour@student.42.fr>          +#+  +:+       +#+        */
+/*   By: injah <injah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 17:48:01 by bvaujour          #+#    #+#             */
-/*   Updated: 2025/07/03 18:54:24 by bvaujour         ###   ########.fr       */
+/*   Updated: 2025/08/31 14:21:17 by injah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx.h"
-#include "stdbool.h"
-#include "stdlib.h"
+#include "game.h"
 
-#define WIDTH 800
-#define HEIGHT 600
-
-typedef struct	s_keys
-{
-	bool	w;
-	bool	a;
-	bool	s;
-	bool	d;
-}				t_keys;
-
-typedef struct	s_data
-{
-    void	*mlx;
-	void	*win;
-	t_keys	keys;
-}				t_data;
 
 int	destroy(t_data *data)
 {
